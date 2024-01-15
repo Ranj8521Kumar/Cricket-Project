@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ranjan's Cricket Game</title>
+    <link rel="stylesheet" href="cricket.css" />
+  </head>
+  <body>
+    <div class="outline">
+      <h2>Welcome to Bat Ball Stump Game</h2>
+
+      <button
+        class="our-choice"
+        onclick="let computerChoice=generateComputerChoice(); let resultMsg=getResult('Bat', computerChoice); showResult('Bat', computerChoice, resultMsg)"
+      >
+        <img src="images/bat.png" alt="Bat Image" class="image-choice" />
+      </button>
+
+      <button
+        class="our-choice"
+        onclick="computerChoice=generateComputerChoice();  resultMsg=getResult('Ball', computerChoice); showResult('Ball', computerChoice, resultMsg)"
+      >
+        <img src="images/ball.png" alt="Ball Image" class="image-choice" />
+      </button>
+
+      <button
+        class="our-choice"
+        onclick=" computerChoice=generateComputerChoice();  resultMsg=getResult('Stump', computerChoice); showResult('Stump', computerChoice, resultMsg)"
+      >
+        <img src="images/stump.png" alt="Stump Image" class="image-choice" />
+      </button>
+
+      <h4 id="user-move"></h4>
+      <h4 id="computer-move"></h4>
+      <h4 id="result"></h4>
+      <h4 id="score"></h4>
+
+      <button
+        id="reset-button"
+        onclick="localStorage.clear()
+        resetScore();
+    "><img src="images/Reset.png" alt="Reset Image" class="reset"></button>
+    </div>
+    <script src="cricket.js"></script>
+  </body>
+</html>
